@@ -8,29 +8,30 @@ import javax.swing.JOptionPane;
 import com.eclipselink.entity.Funcionario;
 
 public class CreateFuncionario {
-static Funcionario funcionario = new Funcionario( ); 
-public static void main (String[] args) {
+	static Funcionario funcionario = new Funcionario();
 
- EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "JPA_01" );
-      
-     EntityManager entitymanager = emfactory.createEntityManager( );
-     entitymanager.getTransaction( ).begin( );
-         
-     entradaDados();
-     
-     entitymanager.persist( funcionario );
-     entitymanager.getTransaction( ).commit( );
+	public static void main(String[] args) {
 
-     entitymanager.close( );
-     emfactory.close( );
-     
-}
+		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("JPA_01");
 
-public static void entradaDados() {  
-funcionario.setIdFuncionario(Integer.parseInt(JOptionPane.showInputDialog("Id")));
-    funcionario.setNome(JOptionPane.showInputDialog("Nome"));
-    funcionario.setSalario(Double.parseDouble(JOptionPane.showInputDialog("Salário")));
-    funcionario.setCargo(JOptionPane.showInputDialog("Cargo"));
-}
+		EntityManager entitymanager = emfactory.createEntityManager();
+		entitymanager.getTransaction().begin();
+
+		entradaDados();
+
+		entitymanager.persist(funcionario);
+		entitymanager.getTransaction().commit();
+
+		entitymanager.close();
+		emfactory.close();
+
+	}
+
+	public static void entradaDados() {
+		funcionario.setIdFuncionario(Integer.parseInt(JOptionPane.showInputDialog("Id")));
+		funcionario.setNome(JOptionPane.showInputDialog("Nome"));
+		funcionario.setSalario(Double.parseDouble(JOptionPane.showInputDialog("Salário")));
+		funcionario.setCargo(JOptionPane.showInputDialog("Cargo"));
+	}
 
 }
