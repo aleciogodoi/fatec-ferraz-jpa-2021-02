@@ -1,7 +1,16 @@
 package com.eclipselink.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
 public class Funcionario {
+	
+	@Id
 	private int idFuncionario;
+	
 	private String nome;
 	private double salario;
 	private String cargo;
