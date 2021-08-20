@@ -29,9 +29,9 @@ public class CreateFuncionario {
 
 	public static void entradaDados() {
 		funcionario.setIdFuncionario(Integer.parseInt(JOptionPane.showInputDialog("Id")));
-		funcionario.setNome(JOptionPane.showInputDialog("Nome"));
+		funcionario.setNome(JOptionPane.showInputDialog("Nome: "));
 		funcionario.setSalario(Double.parseDouble(JOptionPane.showInputDialog("Salário")));
-		funcionario.setCargo(JOptionPane.showInputDialog("Cargo"));
+		funcionario.setCargo(JOptionPane.showInputDialog("Cargo: "));
 	}
 
 }
