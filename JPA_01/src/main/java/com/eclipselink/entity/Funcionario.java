@@ -5,10 +5,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
+@Table                             // Tabela
 public class Funcionario {
 	
-	@Id
+	@Id                            //Chave primária
 	private int idFuncionario;
 	
 	private String nome;
