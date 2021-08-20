@@ -2,10 +2,17 @@ package com.eclipselink.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table                             // Tabela
+@Table       
+@NamedQueries({
+	@NamedQuery(name = "find Funcionario id", query = "Select e from Funcionario e where e.idFuncionario = :id"),
+	@NamedQuery(name = "find Funcionario nome", query = "Select e from Funcionario e where e.nome like :nome")
+})
+
 public class Funcionario {
 	
 	@Id                            //Chave primária
