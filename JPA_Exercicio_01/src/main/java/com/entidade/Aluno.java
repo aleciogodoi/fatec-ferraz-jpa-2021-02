@@ -1,10 +1,15 @@
 package com.entidade;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table
+@NamedQueries ({
+	@NamedQuery(name = "all Alunos", query="Select a From Aluno a")
+})
 public class Aluno {
 	// Atributos
 	@Id					// Define 'ra' como chave primária
