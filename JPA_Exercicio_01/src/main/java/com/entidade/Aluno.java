@@ -12,17 +12,19 @@ public class Aluno {
 	
 	private String nome;
 	private String email;
+	private String celular;
 	private double nota1;
 	private double nota2;
 	
 	// Construtores
 	public Aluno() {
 	}
-	public Aluno(String ra, String nome, String email, double nota1, double nota2) {
-		super();
+	public Aluno(String ra, String nome, String email,
+					String celular, double nota1, double nota2) {
 		this.ra = ra;
 		this.nome = nome;
 		this.email = email;
+		this.celular = celular;
 		this.nota1 = nota1;
 		this.nota2 = nota2;
 	}
@@ -58,10 +60,11 @@ public class Aluno {
 	public void setNota2(double nota2) {
 		this.nota2 = nota2;
 	}
-	
 	@Override
 	public String toString() {
-		return "Aluno [ra=" + ra + ", nome=" + nome + ", email=" + email + ", nota1=" + nota1 + ", nota2=" + nota2
-				+ "]";
+		return "Aluno [ra=" + ra + ", nome=" + nome + ", email=" + email + ", celular=" + celular + ", nota1=" + nota1
+				+ ", nota2=" + nota2 + "]";
 	}
+	
+
 }

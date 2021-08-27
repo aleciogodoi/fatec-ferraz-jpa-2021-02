@@ -22,7 +22,16 @@ public class AlunoCRUD {
 	}
 	
 	public void update(Aluno aluno) {
+		// Unidade de Persistencia
+		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("JPA_01");
+		// Criar objeto para fazer o gerenciamento das classes com as tabelas
+		EntityManager entitymanager = emfactory.createEntityManager();
 		
+		entitymanager.getTransaction().begin();   // abre a transação
+		entitymanager.merge(aluno);               // update aluno
+		entitymanager.getTransaction().commit();  // fecha a transação
+		entitymanager.close();                    // fecha o gerenciador de entidades
+		emfactory.close();                        // fecha a unidade de persistencia
 	}
 
 	public void delete(String ra) {
