@@ -77,5 +77,6 @@ public class AlunoCRUD {
 		Query query = entitymanager.createNamedQuery("all Alunos");
 		List<Aluno> alunos = (List<Aluno>) query.getResultList();
 		return alunos;
+		
 	}
 }

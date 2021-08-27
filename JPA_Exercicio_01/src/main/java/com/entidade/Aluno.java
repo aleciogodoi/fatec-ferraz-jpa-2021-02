@@ -70,6 +70,4 @@ public class Aluno {
 		return "Aluno [ra=" + ra + ", nome=" + nome + ", email=" + email + ", celular=" + celular + ", nota1=" + nota1
 				+ ", nota2=" + nota2 + "]";
 	}
-	
-
 }
