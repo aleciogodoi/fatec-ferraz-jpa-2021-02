@@ -1,7 +1,23 @@
 package com.eclipselink.entity;
 
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
+import javax.persistence.Id;
+
+@Entity
+@Table
+@Inheritance( strategy = InheritanceType.SINGLE_TABLE )
+@DiscriminatorColumn( name = "TIPO" )
+
 public class Cliente {
+	
+	@Id						// Chave Primária Cliente
 	private int idCliente;
+	
 	private String nome;
 	private String endereco;
 	private String telefone;
