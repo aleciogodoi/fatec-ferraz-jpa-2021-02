@@ -10,6 +10,8 @@ public class PessoaFisica extends Cliente {
 	private String rg;
 	private String cpf;
 	private String sexo;
+	public PessoaFisica() {
+	}
 	
 	public PessoaFisica(
 			int idCliente, String nome, String endereco, String telefone, 
