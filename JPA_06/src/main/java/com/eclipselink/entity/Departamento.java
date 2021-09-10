@@ -1,8 +1,7 @@
 package com.eclipselink.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
-@Table 
+
 @Entity
 public class Departamento {
 	@Id
