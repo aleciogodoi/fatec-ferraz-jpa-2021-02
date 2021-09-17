@@ -14,9 +14,9 @@ public class Dao {
 		entitymanager.getTransaction().begin();
 		entitymanager.persist(pessoa);
 		entitymanager.getTransaction().commit();
-		
-		emfactory.close();
+
 		entitymanager.close();
+		emfactory.close();
 	}
 	
 	public static void update(Pessoa pessoa) {
@@ -26,11 +26,11 @@ public class Dao {
 		entitymanager.getTransaction().begin();
 		entitymanager.merge(pessoa);
 		entitymanager.getTransaction().commit();
-		
-		emfactory.close();
+
 		entitymanager.close();		
+		emfactory.close();
 	}
-	
+
 	public static void delete(int id) {
 		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("JPA_EX02");
 		EntityManager entitymanager = emfactory.createEntityManager();
@@ -41,8 +41,8 @@ public class Dao {
 		query.executeUpdate();
 		entitymanager.getTransaction().commit();
 		
-		emfactory.close();
 		entitymanager.close();		
+		emfactory.close();
 	}
 
 	public static Pessoa findId(int id) {
@@ -56,8 +56,8 @@ public class Dao {
 		} catch (Exception e) {
 			pessoa = null;
 		} finally {
-			emfactory.close();
 			entitymanager.close();
+			emfactory.close();
 			return pessoa;
 		}
 	}
@@ -73,8 +73,8 @@ public class Dao {
 		} catch (Exception e) {
 			pessoa = null;
 		} finally {
-			emfactory.close();
 			entitymanager.close();
+			emfactory.close();
 			return pessoa;
 		}
 	}
@@ -90,8 +90,8 @@ public class Dao {
 		} catch (Exception e) {
 			pessoa = null;
 		} finally {
-			emfactory.close();
 			entitymanager.close();
+			emfactory.close();
 			return pessoa;
 		}
 	}
@@ -107,8 +107,8 @@ public class Dao {
 		} catch (Exception e) {
 			pessoas = null;
 		} finally {
+			entitymanager.close();			
 			emfactory.close();
-			entitymanager.close();
 			return pessoas;
 		}
 	}
@@ -123,8 +123,8 @@ public class Dao {
 		} catch (Exception e) {
 			pessoas = null;
 		} finally {
-			emfactory.close();
 			entitymanager.close();
+			emfactory.close();
 			return pessoas;
 		}
 	}

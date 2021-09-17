@@ -14,8 +14,8 @@ import javax.persistence.NamedQuery;
 	@NamedQuery(name="find Pessoa CPF", query ="Select p From Pessoa p Where p.cpf = :cpf"),
 	@NamedQuery(name="find Pessoa RG", query ="Select p From Pessoa p Where p.rg = :rg"),
 	@NamedQuery(name="find Pessoa Nome", query ="Select p From Pessoa p Where p.nome like :nome"),
-	@NamedQuery(name="list Pessoa", query ="Select p From Pessoa p"),
-	@NamedQuery(name="delete Pessoa", query ="Delete From Pessoa Where p.idPessoa = :id")
+	@NamedQuery(name="list Pessoa", query ="Select p From Pessoa p")
+	//@NamedQuery(name="delete Pessoa", query ="Delete From Pessoa Where p.idPessoa = :id")
 })
 public class Pessoa {
 	
