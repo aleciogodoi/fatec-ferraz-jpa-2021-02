@@ -1,7 +1,14 @@
 package com.entidades;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Cliente {
+	
+	@Id
 	private int id;
+	
 	private String nome;
 	private String email;
 	
