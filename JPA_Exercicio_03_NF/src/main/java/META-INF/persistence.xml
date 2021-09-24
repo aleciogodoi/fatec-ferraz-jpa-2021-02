@@ -6,6 +6,8 @@
 	<persistence-unit name="JPA_NF">
 		<class>com.entidades.Cliente</class>
 		<class>com.entidades.Produto</class>
+		<class>com.entidades.Nota</class>
+		<class>com.entidades.Item</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:c:/Bancos de Dados/SQLite3/jpadb_nf.db"></property>
 			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"></property>
