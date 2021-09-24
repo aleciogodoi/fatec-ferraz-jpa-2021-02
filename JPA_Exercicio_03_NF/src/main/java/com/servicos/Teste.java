@@ -17,10 +17,10 @@ public class Teste {
 		entitymanager.getTransaction().begin();
 		ArrayList<Cliente> clientes = new ArrayList<Cliente>();
 		clientes.add(new Cliente(1, "Pedro", "pedro@gmail.com"));
-		clientes.add(new Cliente(1, "Mateus", "mateus@gmail.com"));
-		clientes.add(new Cliente(1, "Ana", "ana@gmail.com"));
-		clientes.add(new Cliente(1, "Maria", "maria@gmail.com"));
-		clientes.add(new Cliente(1, "Alan", "alan@gmail.com"));
+		clientes.add(new Cliente(2, "Mateus", "mateus@gmail.com"));
+		clientes.add(new Cliente(3, "Ana", "ana@gmail.com"));
+		clientes.add(new Cliente(4, "Maria", "maria@gmail.com"));
+		clientes.add(new Cliente(5, "Alan", "alan@gmail.com"));
 		
 		for (Cliente cliente: clientes)
 			entitymanager.persist(cliente);
