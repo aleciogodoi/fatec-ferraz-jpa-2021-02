@@ -19,18 +19,13 @@ public class Item {
 	
 	public Item() {
 	}
-	public Item(int id, float precoUnitario, int quantidade) {
-		super();
-		this.id = id;
-		this.precoUnitario = precoUnitario;
-		this.quantidade = quantidade;
-		this.setTotalItem();
-	}
+
 	
 	public Item(int id, Produto produto, int quantidade) {
 		super();
 		this.id = id;
 		this.produto = produto;
+		this.precoUnitario = produto.getPrecoUnitario();
 		this.quantidade = quantidade;
 		this.setTotalItem();
 	}
