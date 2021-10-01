@@ -26,6 +26,16 @@ public class Item {
 		this.quantidade = quantidade;
 		this.setTotalItem();
 	}
+	
+	public Item(int id, Produto produto, int quantidade) {
+		super();
+		this.id = id;
+		this.produto = produto;
+		this.quantidade = quantidade;
+		this.setTotalItem();
+	}
+	
+	
 	public int getId() {
 		return id;
 	}
